@@ -26,6 +26,21 @@ def vandermonde(m, n, k):
     return vander_sum
 
 
+def bernouli(p, x=1):
+    if x == 1:
+        return p
+    else:
+        return 1-p
+
+
+def binomial(n, p, k):
+    return nCr(n, k) * p**k * (1-p)**(n-k)
+
+
+def hypergeometic(w, b, n, k):
+    return nCr(w, k)*nCr(b, (n-k))/nCr((w+b), n)
+
+
 def Main():
     
     pass

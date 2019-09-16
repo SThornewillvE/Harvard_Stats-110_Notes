@@ -41,6 +41,23 @@ def hypergeometic(w, b, n, k):
     return nCr(w, k)*nCr(b, (n-k))/nCr((w+b), n)
 
 
+def geom(p, k):
+    q = (1-p)
+    return q**k * p
+
+
+def neg_binom(p, n, r):
+    return p**r * (1-p)**n * nCr((n+r-1), (r-1))
+
+
+def uniform(a, b):
+    return 1/(b-a)
+
+
+def poisson(lmbd, k):
+    return (np.exp(-lmbd) * (lmbd**k)) / factorial(k)
+
+
 def Main():
     
     pass
